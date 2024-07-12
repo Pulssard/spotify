@@ -1,5 +1,6 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import { songsData } from "../assets/assets";
+import { albumsData } from "../assets/assets";
+import { useParams } from "react-router-dom";
 
 export const PlayerContext = createContext();
 
@@ -9,7 +10,7 @@ const PlayerContextProvider = (props) => {
     const seekBg = useRef();
     const seekBar = useRef();
 
-    const [track, setTrack] = useState(songsData[0]);
+    const [track, setTrack] = useState(albumsData[2].songsData[0]);
     const [playerStatus, setPlayerStatus] = useState(false);
     const [time, setTime] = useState({
         currentTime:{
@@ -33,7 +34,7 @@ const PlayerContextProvider = (props) => {
     };
 
     const playWithId = async (id) => {
-        await setTrack(songsData[id]);
+        await setTrack(albumsData[param].songsData[id]);
         await audioRef.current.play();
         setPlayerStatus(true)
     }
