@@ -8,7 +8,7 @@ const [passwordValue, setPasswordValue] = useState('');
 const [repeatPasswordValue, setRepeatPasswordValue] = useState('');
 const [invalidInput, setInvalidInput] = useState(false);
 
-const {setIsLoggedIn, setUserLogged} = useContext(PlayerContext);
+const {setIsLoggedIn} = useContext(PlayerContext);
 
 const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const handleRegister = (e) => {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
-    setUserLogged(usernameValue);
+    localStorage.setItem('userLogged', usernameValue);
     setIsLoggedIn(true);
     navigate('/');
   }  else {

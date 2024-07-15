@@ -8,8 +8,8 @@ const SongItem = ({name, image, desc}) => {
 
   useEffect(() => {
     // Reset id and albumId
-    setId(-1);
-    setAlbumId(-1);
+    /*setId(-1);
+    setAlbumId(-1);*/
 
     // Search for the album and song id
     const foundAlbumIndex = albumsData.findIndex(album => {

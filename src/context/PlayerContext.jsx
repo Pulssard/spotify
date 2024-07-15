@@ -9,14 +9,12 @@ const PlayerContextProvider = (props) => {
     const seekBg = useRef();
     const seekBar = useRef();
     const [albumId, setAlbumId] = useState();
-
-    const [userLogged, setUserLogged] = useState();
-
-    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+    const [userLogged, setUserLogged] = useState(localStorage.getItem('userLogged'));
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true' || false);
 
     useEffect(() => {
         localStorage.setItem('isLoggedIn', isLoggedIn.toString());
-      }, [isLoggedIn]);
+      }, [isLoggedIn, userLogged]);
 
     const [track, setTrack] = useState(albumsData[0].songsData[0]);
     const [playerStatus, setPlayerStatus] = useState(false);
@@ -44,7 +42,7 @@ const PlayerContextProvider = (props) => {
     const playWithId = async (id, albumId = albumId) => {
         await setTrack(albumsData[albumId].songsData[id]);
         await audioRef.current.play();
-        setPlayerStatus(true)
+        setPlayerStatus(true);
     }
 
     const previousSong = async () => {
@@ -80,13 +78,13 @@ const PlayerContextProvider = (props) => {
                         minute:Math.floor(audioRef.current.currentTime / 60),
                     },
                     totalTime:{
-                        second: Math.floor(audioRef.current.duration % 60),
-                        minute:Math.floor(audioRef.current.duration / 60),
+                        second: Math.floor(audioRef.current.duration % 60) || 0,
+                        minute: Math.floor(audioRef.current.duration / 60) || 0,
                     }
                 })
             }
         },1000)
-    },[audioRef])
+    },[audioRef, track])
 
     const contextValue = {
         audioRef,

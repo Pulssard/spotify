@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect} from "react";
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
 import Display from "./components/Display";
@@ -9,6 +9,7 @@ import RegisterForm from './components/RegisterForm';
 import LogIn from './components/LogIn';
 
 const App = () => {
+  
   const {isLoggedIn} = useContext(PlayerContext);
 
   const {audioRef, track} = useContext(PlayerContext);
@@ -28,7 +29,7 @@ const App = () => {
     : (
       <>
       <Route path='/register' element={<RegisterForm />} />
-      <Route path='/signin' element = {<SignIn />} />
+      <Route path='/*' element = {<SignIn />} />
       <Route path='/login' element = {<LogIn />} />
       </>
     )}
