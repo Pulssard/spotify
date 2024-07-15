@@ -121,7 +121,7 @@ export const albumsData = [
                 image: img1,
                 file:song1,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:52"
+                duration:"3:29"
             },
             {
                 id:1,
@@ -129,7 +129,7 @@ export const albumsData = [
                 image: img2,
                 file:song2,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"3:52"
             },
             {
                 id:2,
@@ -137,7 +137,7 @@ export const albumsData = [
                 image: img3,
                 file:song3,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"4:40"
             },
             {
                 id:3,
@@ -145,7 +145,7 @@ export const albumsData = [
                 image: img4,
                 file:song4,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"3:30"
             },
             {
                 id:4,
@@ -153,7 +153,7 @@ export const albumsData = [
                 image: img5,
                 file:song5,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"4:57"
             },
         ]
     },
@@ -170,7 +170,7 @@ export const albumsData = [
                 image: img6,
                 file:song6,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:00"
+                duration:"4:13"
             },
             {
                 id:1,
@@ -178,7 +178,7 @@ export const albumsData = [
                 image: img9,
                 file:song7,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"3:27"
             },
             {
                 id:2,
@@ -186,7 +186,7 @@ export const albumsData = [
                 image: img10,
                 file: song8,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"3:28"
             },
             {
                 id:3,
@@ -194,7 +194,7 @@ export const albumsData = [
                 image: img11,
                 file:song9,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"4:52"
             },
             {
                 id:4,
@@ -202,7 +202,7 @@ export const albumsData = [
                 image:img12 ,
                 file:song10,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"3:36"
             },
         ]
     },
@@ -219,7 +219,7 @@ export const albumsData = [
                 image: img14,
                 file:song13,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:00"
+                duration:"3:57"
             },
             {
                 id:1,
@@ -227,7 +227,7 @@ export const albumsData = [
                 image: img14,
                 file:song14,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"3:51"
             },
             {
                 id:2,
@@ -235,7 +235,7 @@ export const albumsData = [
                 image:img14 ,
                 file:song15,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"3:47"
             },
             {
                 id:3,
@@ -243,7 +243,7 @@ export const albumsData = [
                 image: img14,
                 file:song16,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"4:05"
             },
             {
                 id:4,
@@ -251,7 +251,7 @@ export const albumsData = [
                 image: img14,
                 file:song17,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"3:15"
             },
         ]
     },
@@ -268,7 +268,7 @@ export const albumsData = [
                 image: img16,
                 file:song18,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:00"
+                duration:"3:55"
             },
             {
                 id:1,
@@ -276,7 +276,7 @@ export const albumsData = [
                 image: img17,
                 file:song19,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"4:28"
             },
             {
                 id:2,
@@ -284,7 +284,7 @@ export const albumsData = [
                 image: img18,
                 file:song20,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"3:39"
             },
             {
                 id:3,
@@ -292,7 +292,7 @@ export const albumsData = [
                 image: img19,
                 file:song21,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"4:13"
             },
             {
                 id:4,
@@ -300,7 +300,7 @@ export const albumsData = [
                 image: img20,
                 file:song22,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"4:26"
             },
         ]
 
@@ -318,7 +318,7 @@ export const albumsData = [
                 image: img21,
                 file:song23,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:00"
+                duration:"4:01"
             },
             {
                 id:1,
@@ -326,7 +326,7 @@ export const albumsData = [
                 image: img21,
                 file:song24,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"4:08"
             },
             {
                 id:2,
@@ -334,7 +334,7 @@ export const albumsData = [
                 image: img21,
                 file:song25,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"3:42"
             },
             {
                 id:3,
@@ -342,7 +342,7 @@ export const albumsData = [
                 image: img21,
                 file:song26,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"4:10"
             },
             {
                 id:4,
@@ -350,7 +350,7 @@ export const albumsData = [
                 image: img21,
                 file:song27,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"3:48"
             },
         ]
     },
@@ -367,7 +367,7 @@ export const albumsData = [
                 image:img23 ,
                 file:song28,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:00"
+                duration:"3:33"
             },
             {
                 id:1,
@@ -375,7 +375,7 @@ export const albumsData = [
                 image: img24,
                 file:song29,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:20"
+                duration:"3:44"
             },
             {
                 id:2,
@@ -383,7 +383,7 @@ export const albumsData = [
                 image: img25,
                 file:song30,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:32"
+                duration:"4:40"
             },
             {
                 id:3,
@@ -391,7 +391,7 @@ export const albumsData = [
                 image: img26,
                 file:song31,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"2:50"
+                duration:"3:19"
             },
             {
                 id:4,
@@ -399,7 +399,7 @@ export const albumsData = [
                 image: img27,
                 file:song32,
                 desc:"Put a smile on your face with these happy tunes",
-                duration:"3:10"
+                duration:"5:11"
             },
         ]
     }
@@ -408,67 +408,68 @@ export const albumsData = [
 export const songsData = [
     {
         id:0,
-        name: "Song One",
-        image: img1,
-        file:song1,
+        name: "We Are The People",
+        image: img27,
+        file:song32,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"3:00"
+        duration:"5:11"
     },
     {
         id:1,
-        name: "Song Two",
-        image: img2,
-        file:song2,
+        name: "Lose Yourself to Dance",
+        image: img21,
+        file:song26,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:20"
+        duration:"4:10"
     },
     {
         id:2,
-        name: "Song Three",
+        name: "ABBA - Lay All Your Love On Me",
         image: img3,
         file:song3,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:32"
+        duration:"4:40"
     },
     {
         id:3,
-        name: "Song Four",
-        image: img4,
-        file:song1,
+        name: "AC/DC - Thunderstruck",
+        image: img11,
+        file:song9,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:50"
+        duration:"4:52"
     },
     {
         id:4,
-        name: "Song Five",
-        image: img5,
-        file:song2,
+        name: "Dopamine (Official Music Video) ft. Eyelar",
+        image: img14,
+        file:song13,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"3:10"
+        duration:"3:57"
     },
     {
         id:5,
-        name: "Song Six",
-        image: img14    ,
-        file:song3,
+        name: "Gorillaz - Feel Good Inc.",
+        image: img19,
+        file:song21,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:45"
+        duration:"4:13"
     },
     {
         id:6,
-        name: "Song Seven",
-        image: img7,
-        file:song1,
+        name: "Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers",
+        image: img21,
+        file:song24,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:18"
+        duration:"4:08"
     },
     {
         id:7,
-        name: "Song Eight",
-        image: img12,
-        file:song2,
+        name: "Gorillaz - Clint Eastwood",
+        image: img17,
+        file:song19,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:35"
-    }
+        duration:"4:28"
+    },
+
 ]
 

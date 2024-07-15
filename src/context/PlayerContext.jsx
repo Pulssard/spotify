@@ -1,6 +1,5 @@
 import { createContext, useEffect, useRef, useState } from "react";
 import { albumsData } from "../assets/assets";
-import { useParams } from "react-router-dom";
 
 export const PlayerContext = createContext();
 
@@ -9,8 +8,17 @@ const PlayerContextProvider = (props) => {
     const audioRef = useRef();
     const seekBg = useRef();
     const seekBar = useRef();
+    const [albumId, setAlbumId] = useState();
 
-    const [track, setTrack] = useState(albumsData[2].songsData[0]);
+    const [userLogged, setUserLogged] = useState();
+
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+
+    useEffect(() => {
+        localStorage.setItem('isLoggedIn', isLoggedIn.toString());
+      }, [isLoggedIn]);
+
+    const [track, setTrack] = useState(albumsData[0].songsData[0]);
     const [playerStatus, setPlayerStatus] = useState(false);
     const [time, setTime] = useState({
         currentTime:{
@@ -33,22 +41,22 @@ const PlayerContextProvider = (props) => {
         setPlayerStatus(false);
     };
 
-    const playWithId = async (id) => {
-        await setTrack(albumsData[param].songsData[id]);
+    const playWithId = async (id, albumId = albumId) => {
+        await setTrack(albumsData[albumId].songsData[id]);
         await audioRef.current.play();
         setPlayerStatus(true)
     }
 
     const previousSong = async () => {
         if(track.id > 0){
-            await setTrack(songsData[track.id-1]);
+            await setTrack(albumsData[albumId].songsData[track.id-1]);
             await audioRef.current.play();
             setPlayerStatus(true);
         }
     };
     const nextSong = async () => {
-        if(track.id < songsData.length -1){
-            await setTrack(songsData[track.id+1]);
+        if(track.id < albumsData[albumId].songsData.length -1){
+            await setTrack(albumsData[albumId].songsData[track.id+1]);
             await audioRef.current.play();
             setPlayerStatus(true);
         }
@@ -58,6 +66,8 @@ const PlayerContextProvider = (props) => {
         audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)* audioRef.current.duration);
     }
 
+
+    
     useEffect(() => {
         setTimeout(() => {
             audioRef.current.ontimeupdate = () => {
@@ -88,7 +98,10 @@ const PlayerContextProvider = (props) => {
         play, pause,
         playWithId,
         previousSong, nextSong,
-        seekSong
+        seekSong,
+        setAlbumId,
+        isLoggedIn, setIsLoggedIn,
+        userLogged,setUserLogged,
     };
 
     return (

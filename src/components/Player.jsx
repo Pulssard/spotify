@@ -11,7 +11,7 @@ const Player = () => {
         <div className='hidden lg:flex items-center gap-4'>
             <img className='w-12' src={track.image} alt="song image"/>
             <div>
-                <p>{track.name}</p>
+                <p className="w-[250px]">{track.name.slice(0,33) + '...'}</p>
                 <p>{track.desc.slice(0,12)}</p>
             </div> 
         </div>

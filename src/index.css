@@ -5,3 +5,11 @@
 ::-webkit-scrollbar{
     display:none;
 }
+
+html,body, #root{
+    height:100vh;
+}
+
+.invalid-input{
+    background-color: rgba(204, 137, 137, 0.695);
+}

@@ -8,8 +8,9 @@ const DisplayAlbum = () => {
 
     const {id} = useParams();
     const albumData = albumsData[id];
-    const {playWithId} = useContext(PlayerContext)
-
+    const {playWithId} = useContext(PlayerContext);
+    const {setAlbumId} = useContext(PlayerContext);
+    setAlbumId(id);
   return (
     <>
         <Navbar />
@@ -28,25 +29,25 @@ const DisplayAlbum = () => {
                 </p>
             </div>
         </div>
-        <div className='grid grid-cols-3 sm:grid-cols-4 mt-10 mb-4 pl-2 text-[#a7a7a7] gap-3'>
+        <div className='grid grid-cols-2 items-end sm:grid-cols-4 mt-10 mb-4 pl-2 text-[#a7a7a7] gap-3'>
             <p>
                 <b className='mr-4'>#</b>
                 Title
             </p>
-            <p >Album</p>
+            <p className='hidden sm:block ml-10 '>Album</p>
             <p className='hidden sm:block'>Date Added</p>
-            <img className='m-auto w-4' src={assets.clock_icon} alt='clock icon'/>
+            <img className='m-auto w-4 ' src={assets.clock_icon} alt='clock icon'/>
         </div>
         <hr />
         {
             albumData.songsData.map((el, i) => (
-                <div onClick={() => playWithId(el.id)} key={i} className='grid grid-cols-3 sm:grid-cols-4 gap-5 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff] cursor-pointer'>
-                    <p className='text-white flex'>
+                <div onClick={() => playWithId(el.id,id)} key={i} className='grid grid-cols-2 sm:grid-cols-4 gap-8 p-2 items-center text-[#727070]  hover:bg-[#ffffff] cursor-pointer'>
+                    <p className='text-[#a7a7a7] flex '>
                         <b className='mr-4 text-[#a7a7a7]'>{i+1}</b>
-                        <img className='inline w-10 h-10 mr-5' src={el.image} alt='song image' />
-                        <p >{el.name}</p>
+                        <img className='w-10 h-10 mr-5 hidden sm:inline' src={el.image} alt='song image' />
+                        <p>{el.name.slice(0,12) + '...'}</p>
                     </p>
-                    <p className='text-[15px] '>{albumData.name}</p>
+                    <p className='text-[15px] hidden ml-10 sm:block'>{albumData.name}</p>
                     <p className='text-[15px] hidden sm:block'>5 days ago</p>
                     <p className='text-[15px] text-center'>{el.duration}</p>
                 </div>))
