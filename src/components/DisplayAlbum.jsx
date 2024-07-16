@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import Navbar from './Navbar'
-import { useParams } from 'react-router-dom'
+import { useContext, useEffect } from 'react';
+import Navbar from './Navbar';
+import { useParams } from 'react-router-dom';
 import { albumsData, assets } from '../assets/assets';
 import { PlayerContext } from '../context/PlayerContext';
 
@@ -10,7 +10,11 @@ const DisplayAlbum = () => {
     const albumData = albumsData[id];
     const {playWithId} = useContext(PlayerContext);
     const {setAlbumId} = useContext(PlayerContext);
-    setAlbumId(id);
+
+    useEffect(() => {
+        setAlbumId(id);
+    },[id,setAlbumId]);
+
   return (
     <>
         <Navbar />
@@ -45,7 +49,7 @@ const DisplayAlbum = () => {
                     <p className='text-[#a7a7a7] flex '>
                         <b className='mr-4 text-[#a7a7a7]'>{i+1}</b>
                         <img className='w-10 h-10 mr-5 hidden sm:inline' src={el.image} alt='song image' />
-                        <p>{el.name.slice(0,12) + '...'}</p>
+                        <span>{el.name.slice(0,12) + '...'}</span>
                     </p>
                     <p className='text-[15px] hidden ml-10 sm:block'>{albumData.name}</p>
                     <p className='text-[15px] hidden sm:block'>5 days ago</p>

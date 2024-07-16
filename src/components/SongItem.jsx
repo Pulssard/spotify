@@ -1,4 +1,4 @@
-import React, { useContext, useEffect,useState } from 'react'
+import { useContext, useEffect,useState } from 'react'
 import { PlayerContext } from '../context/PlayerContext';
 import { albumsData } from '../assets/assets';
 

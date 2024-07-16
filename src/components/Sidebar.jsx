@@ -1,14 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
 import {assets} from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
+import SidebarButtons from './SidebarButtons';
+import { PlayerContext } from '../context/PlayerContext';
 //import Playlist from './Playlist';
  const Sidebar = () => {
 
     const navigate = useNavigate();
-
+    const {showSidebar} = useContext(PlayerContext)
     
     return (
-        <div className="w-[25%] min-w-[150px] h-full p-2 flex-col gap-2 text-white lg:flex">
+        <div className={`sidebar w-[25%] min-w-[150px] h-full p-2 flex-col gap-2 text-white ${showSidebar ? 'flex' : 'hidden'} sm:flex`}>
             <div className='bg-[#121212] h-[15%] rounded flex flex-col justify-around'>
                 <div onClick={() => navigate('/')} className='flex items-center gap-3 pl-8 cursor-pointer'>
                     <img className='w-6' src={assets.home_icon} alt='home icon'/>
@@ -31,17 +33,8 @@ import { useNavigate } from 'react-router-dom';
                     </div>
                 </div>
                     {/*<Playlist name={}/>*/} 
-                <div className='p-4 bg-[#121212] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4'>
-                    <h1>Create playlist</h1>
-                    <p className='font-light hidden md:block'>it's easy we will help you</p>
-                    <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4 '>Create Playlist</button>
-                </div>
-                <div className='p-4 bg-[#121212] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4 mt-4'>
-                    <h1>Podcasts</h1>
-                    <p className='font-light hidden md:block'>we will keep updated on new episodes</p>
-                    <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>Browse Podcast</button>
-                </div>
-
+                <SidebarButtons textTitle='Create playlist' textDesc="It's plain and easy..." margin=''/>
+                <SidebarButtons textTitle='Podcasts' textDesc="We'll keep you updated!" margin='mt-4'/>
             </div>
         </div>
     )

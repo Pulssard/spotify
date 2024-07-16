@@ -14,8 +14,10 @@ const PlayerContextProvider = (props) => {
 
     useEffect(() => {
         localStorage.setItem('isLoggedIn', isLoggedIn.toString());
+        setUserLogged(localStorage.getItem('userLogged'));
       }, [isLoggedIn, userLogged]);
 
+    const [showSidebar, setShowSidebar] = useState(false);
     const [track, setTrack] = useState(albumsData[0].songsData[0]);
     const [playerStatus, setPlayerStatus] = useState(false);
     const [time, setTime] = useState({
@@ -64,9 +66,9 @@ const PlayerContextProvider = (props) => {
         audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)* audioRef.current.duration);
     }
 
-
     
     useEffect(() => {
+        if(isLoggedIn){
         setTimeout(() => {
             audioRef.current.ontimeupdate = () => {
 
@@ -83,7 +85,7 @@ const PlayerContextProvider = (props) => {
                     }
                 })
             }
-        },1000)
+        },1000)}
     },[audioRef, track])
 
     const contextValue = {
@@ -100,6 +102,7 @@ const PlayerContextProvider = (props) => {
         setAlbumId,
         isLoggedIn, setIsLoggedIn,
         userLogged,setUserLogged,
+        showSidebar,setShowSidebar
     };
 
     return (
