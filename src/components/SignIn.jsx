@@ -4,6 +4,8 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
+  localStorage.setItem('users', JSON.stringify([{username: 'admin', password: 'admin'},]));
+
   return (
     <div  className='w-[100%] h-[100%] bg-green-700 flex flex-col justify-center items-center gap-1'>
     <h1 className='mb-12'>Log in, or create an account</h1>
