@@ -1,18 +1,27 @@
-import { useContext} from "react";
+import { useContext, useEffect} from "react";
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
 import Display from "./components/Display";
 import { PlayerContext } from "./context/PlayerContext";
 import SignIn from "./components/SignIn";
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes, useLocation} from 'react-router-dom';
 import RegisterForm from './components/RegisterForm';
 import LogIn from './components/LogIn';
 
 const App = () => {
   
-  const {isLoggedIn} = useContext(PlayerContext);
+  const {isLoggedIn, setIsLoggedIn} = useContext(PlayerContext);
 
   const {audioRef, track} = useContext(PlayerContext);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const authPaths = ['/register', '/login', '/signin'];
+    if (authPaths.includes(location.pathname)) {
+      setIsLoggedIn(false);
+    }
+  }, [location.pathname, setIsLoggedIn]);
 
   const DisplayHome = <div className="h-screen bg-black">
   <div className="h-[90%] flex">
